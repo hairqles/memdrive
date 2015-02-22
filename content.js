@@ -4,12 +4,7 @@
  */
 
 /**
- *
- */
-console.log("content script injected");
-
-/**
- *
+ * 
  */
 chrome.runtime.onMessage.addListener(function(message, sender, sendResponse) {
 	if (message.action == "getSelectedText") {
@@ -17,7 +12,7 @@ chrome.runtime.onMessage.addListener(function(message, sender, sendResponse) {
 
 		var response = {
 			action: "getSelectedText",
-			selectedText: selected
+			selectedText: selected,
 		}
 		
 		sendResponse(response);
